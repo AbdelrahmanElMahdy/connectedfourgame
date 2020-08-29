@@ -1,0 +1,11 @@
+
+#center{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  th,td{
+    border-radius: 50%;
+    background-color: #95A994 ;
+    width:100px;
+    height:100px;
+  }
