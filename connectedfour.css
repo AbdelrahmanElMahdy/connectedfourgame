@@ -26,6 +26,13 @@ p{
   font-size: large;
   font-style: oblique;
   color: #07610C;
+}
 
 
+.playerOneTurn{
+  background-color: #07610C;
+}
+
+.playerTwoTurn{
+  background-color: blue;
 }
