@@ -9,3 +9,23 @@
     width:100px;
     height:100px;
   }
+p{
+  font-size: large;
+  font-style: oblique;
+  font-weight: bolder;
+  color: black;
+}
+.playerOne{
+  font-size: large;
+  font-style: oblique;
+  font-weight: bolder;
+  color: #891026;
+}
+.playerTwo{
+  font-weight: bolder;
+  font-size: large;
+  font-style: oblique;
+  color: #07610C;
+
+
+}
