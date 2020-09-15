@@ -10,22 +10,68 @@ $("td").click(function(){
     actualElement=rows[level[selected]--].children[selected];
     if(playerOne){
         actualElement.className="playerOneTurn";
+        console.log(checkWinner( gettingCalssesArray(actualElement)))
         playerOne=false;
     }
     else{
         actualElement.className="playerTwoTurn";
+        console.log(checkWinner( gettingCalssesArray(actualElement)))
         playerOne=true;
     }
     selected++;
 })
 
-function checkWinner(element){
-    var temp_element=temp_element2=temp_element3=element
-    var topElementsClasses=topElementsArray(temp_element)
-    var bottomelementCalsses=bottomElementsArray(temp_element2)
-    var rightelementCalsses=rightElementsArray(temp_element3)
-    var leftelementCalsses=leftElementsArray(element)
-    return [topElementsClasses,bottomelementCalsses,rightelementCalsses,leftelementCalsses]
+function checkWinner(array){
+  vertical=array[0];
+  horizental=array[1];
+
+  return check(vertical)==true ||check(horizental)==true
+}
+
+function check(array){
+  var limitToWin=0;
+  var win=false;
+  
+  var index=0;
+  while(index<(array.length)-1){
+    currentElement=array[index];
+    nextElement=array[index+1];
+    index++;
+    
+    if((currentElement==nextElement)&&(currentElement !=""))
+        limitToWin++;
+    else limitToWin=0;    
+    
+    
+    if(limitToWin >=3)
+      win=true;
+  }
+   
+  
+    return win; 
+}
+
+
+  
+
+
+function gettingCalssesArray(element){
+    var temp_element=temp_element2=temp_element3=element;
+    var topElementsClasses=topElementsArray(temp_element);
+    var bottomelementCalsses=bottomElementsArray(temp_element2);
+    var rightelementCalsses=rightElementsArray(temp_element3);
+    var leftelementCalsses=leftElementsArray(element);
+    
+
+    bottomelementCalsses.shift();
+    bottomelementCalsses.reverse()
+    var vertical=bottomelementCalsses.concat(topElementsClasses)
+
+    leftelementCalsses.shift()
+    leftelementCalsses.reverse()
+    var horizental=leftelementCalsses.concat(rightelementCalsses)
+    return([vertical,horizental])
+
 }
 
 function leftElementsArray(element){
