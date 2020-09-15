@@ -10,12 +10,14 @@ $("td").click(function(){
     actualElement=rows[level[selected]--].children[selected];
     if(playerOne){
         actualElement.className="playerOneTurn";
-        console.log(checkWinner( gettingCalssesArray(actualElement)))
+        if(checkWinner( gettingCalssesArray(actualElement)))
+            alert("Well done "+$(".playerOne").eq(0)[0].innerHTML)
         playerOne=false;
     }
     else{
         actualElement.className="playerTwoTurn";
-        console.log(checkWinner( gettingCalssesArray(actualElement)))
+        if(checkWinner( gettingCalssesArray(actualElement)))
+        alert("Well done "+$(".playerTwo").eq(0)[0].innerHTML)
         playerOne=true;
     }
     selected++;
