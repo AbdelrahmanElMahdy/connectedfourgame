@@ -1,6 +1,6 @@
 four connected game allows two users to play with each other  both of them has  a turn 
-they onely chose the column where their ball falls in , and if the manage to connect four 
-balls next each other they win 
+they only chose the column where their ball falls in , and if one of the player manage to connect four 
+balls next each other, this player wins
 now the game is run locally just
 1. download the `Connected four games`
 2. open `connected four.html` in any browser
