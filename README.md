@@ -5,5 +5,5 @@ now the game is run locally just
 1. download the `Connected four games`
 2. open `connected four.html` in any browser
 3. add your name and your opponent name
-4. start play 
+4. start playing 
 5. someone wins Horrray!
